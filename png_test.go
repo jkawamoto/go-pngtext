@@ -1,6 +1,7 @@
 package pngtext_test
 
 import (
+	"fmt"
 	"os"
 	"reflect"
 	"strings"
@@ -168,4 +169,12 @@ func TestParseNotPNGData(t *testing.T) {
 	if err != pngtext.ErrNotPngData {
 		t.Errorf("expect %v, got %v", pngtext.ErrNotPngData, err)
 	}
+}
+
+func ExampleParseTextualData() {
+	r, _ := os.Open("test.png")
+	defer r.Close()
+
+	res, _ := pngtext.ParseTextualData(r)
+	fmt.Println(res.Find("Text").Text) // Output: text data
 }
