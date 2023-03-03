@@ -1,3 +1,27 @@
+// png.go
+//
+// Copyright (c) 2023 Junpei Kawamoto
+//
+// This software is released under the MIT License.
+//
+// http://opensource.org/licenses/mit-license.php
+
+/*
+Package pngtext provides function ParseTextualData that parses a PNG file and returns a list of textual data stored
+in the file.
+
+To parse textual data, simply call ParseTextualData:
+
+	r, _ := os.Open("test.png")
+	defer r.Close()
+
+	res, _ := pngtext.ParseTextualData(r)
+
+TextualDataList, which ParseTextualData returns as a result, is a list of TextualData but also implements Find function
+that helps you to get text data associated with a keyword. This returns TextualData of which keyword is Description:
+
+	res.Find("Description")
+*/
 package pngtext
 
 import (
