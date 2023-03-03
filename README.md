@@ -1,4 +1,5 @@
 # go-pngtext
+[![Go library](https://github.com/jkawamoto/go-pngtext/actions/workflows/ci.yaml/badge.svg)](https://github.com/jkawamoto/go-pngtext/actions/workflows/ci.yaml)
 [![GoDoc](https://pkg.go.dev/badge/github.com/jkawamoto/go-pngtext)](https://pkg.go.dev/github.com/jkawamoto/go-pngtext)
 
 Parse textual data from a PNG file.
